@@ -23,9 +23,5 @@ public class App
     	arquivo.readerFile();
     	Kmp busca = new Kmp("assim",arquivo.getText());
     	busca.retornar();
-
-    	
-    	
-    
     }
 }
