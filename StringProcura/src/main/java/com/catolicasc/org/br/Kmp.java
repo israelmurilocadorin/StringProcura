@@ -3,6 +3,7 @@ package com.catolicasc.org.br;
 public class Kmp {
     private String busca;
     private String texto = "NÃ£o foi passado texto";
+    private String msg;
     private int lps[];
     private int len = 0;
     private int i   = 1;
@@ -15,6 +16,13 @@ public class Kmp {
     public Kmp(String busca,String texto) {
         this.busca = busca;
         this.texto = texto;
+    }
+    
+    public Kmp(String busca,String texto,Boolean x) {
+        this.busca = busca;
+        this.texto = texto;
+        if(x)
+        	kmpSearch();
     }
 
     public void kmpSearch() {
@@ -29,7 +37,8 @@ public class Kmp {
                 j++;
                 i++;
             } if (j == m) {
-                System.out.println("Palavra/letra encontrada na posiÃ§Ã£o: " + (i - j));
+                System.out.println("Palavra/letra encontrada na posição: " + (i - j));
+                this.msg = "Palavra encontrada";
                 j = lps[j - 1];
             }
             else if (i < n && busca.charAt(j) != texto.charAt(i)) {
@@ -57,7 +66,9 @@ public class Kmp {
             }
         }
     }
-    
+    public String getMsg() {
+    	return this.msg;
+    }
     public void retornar() {
         kmpSearch();
         computeLpsArray();
