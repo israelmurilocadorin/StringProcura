@@ -37,7 +37,7 @@ public class Kmp {
                 j++;
                 i++;
             } if (j == m) {
-                System.out.println("Palavra/letra encontrada na posiÃ§Ã£o: " + (i - j));
+                System.out.println("Palavra/letra encontrada na posição: " + (i - j));
                 this.msg = "Palavra encontrada";
                 j = lps[j - 1];
             }

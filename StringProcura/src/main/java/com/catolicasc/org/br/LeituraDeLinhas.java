@@ -10,7 +10,7 @@ import java.io.IOException;
 public class LeituraDeLinhas {
 	
 	public String way;
-	public String text = "";
+	public String text = "Ainda não foi lido";
 	
 	public LeituraDeLinhas(String way){
 		this.way = way;
@@ -36,6 +36,7 @@ public class LeituraDeLinhas {
 	}
 	
 	public void readerFile(){
+		text = "";
 		try{
 			 FileReader ler = new FileReader(this.way);
 			 BufferedReader reader = new BufferedReader(ler);  

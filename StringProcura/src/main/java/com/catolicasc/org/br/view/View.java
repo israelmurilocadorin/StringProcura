@@ -1,15 +1,15 @@
-package com.catolicasc.org.br;
+package com.catolicasc.org.br.view;
 
+import com.catolicasc.org.br.Kmp;
 import java.awt.EventQueue;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import java.awt.BorderLayout;
 import javax.swing.JTextField;
-import java.awt.Color;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.TextField;
 
 public class View {
 
