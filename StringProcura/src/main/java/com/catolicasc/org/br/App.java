@@ -23,7 +23,14 @@ public class App
 //    	arquivo.readerFile();
 //    	Kmp busca = new Kmp("assim",arquivo.getText());
 //    	busca.retornar();
-//    	Naive n = new Naive("mamar", "Israel é viadão, e gosta de mamar");
-//    	n.procurar();
+    	    	
+//    	TestAbstrata n = new TestAbstrata("b", "a");
+//    	n.buscar();
+//    	System.out.println(n.getResposta());
+        
+    	NaiveA n = new NaiveA("Esse", "Esse � o texto de teste");
+    	n.buscar();
+    	System.out.println(n.getResposta());
+
     }
 }
