@@ -3,7 +3,7 @@ package com.catolicasc.org.br;
 public abstract class BuscaAbastrata {
 	public String busca;
 	public String texto;
-	public String resposta = "Sem resposta!";
+	public String resposta = null;
 	
 	public BuscaAbastrata(String busca, String texto) {
 		this.busca = busca;
