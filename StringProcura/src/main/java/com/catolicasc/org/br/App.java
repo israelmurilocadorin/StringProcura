@@ -17,11 +17,20 @@ public class App
     	//busca.retornar();
 
     	
-    	String way = "C:\\Users\\israel.cadorin\\Desktop\\pedro1.txt";
-    	LeituraDeLinhas arquivo = new LeituraDeLinhas(way);
-    	arquivo.createFile("Israel é viadão, e gosta de mamar");
-    	arquivo.readerFile();
-    	Kmp busca = new Kmp("assim",arquivo.getText());
-    	busca.retornar();
+//    	String way = "C:\\Users\\israel.cadorin\\Desktop\\pedro1.txt";
+//    	LeituraDeLinhas arquivo = new LeituraDeLinhas(way);
+//    	arquivo.createFile("Israel é viadão, e gosta de mamar");
+//    	arquivo.readerFile();
+//    	Kmp busca = new Kmp("assim",arquivo.getText());
+//    	busca.retornar();
+    	    	
+//    	TestAbstrata n = new TestAbstrata("b", "a");
+//    	n.buscar();
+//    	System.out.println(n.getResposta());
+        
+    	NaiveA n = new NaiveA("Esse", "Esse � o texto de teste");
+    	n.buscar();
+    	System.out.println(n.getResposta());
+
     }
 }
