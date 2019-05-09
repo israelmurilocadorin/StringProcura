@@ -10,7 +10,7 @@ import java.io.IOException;
 public class LeituraDeLinhas {
 	
 	public String way;
-	public String text = "Ainda n„o foi lido";
+	public String text = "Ainda n√£o foi lido";
 	
 	public LeituraDeLinhas(String way){
 		this.way = way;
