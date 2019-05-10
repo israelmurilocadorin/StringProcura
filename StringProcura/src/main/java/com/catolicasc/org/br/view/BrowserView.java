@@ -25,6 +25,7 @@ public class BrowserView extends javax.swing.JFrame {
      * Creates new form NewJFrame
      */
     public BrowserView() {
+    	setTitle("Browser View");
         initComponents();
     }
 
@@ -39,7 +40,6 @@ public class BrowserView extends javax.swing.JFrame {
         jLabelTesxtoBusca = new javax.swing.JLabel();
         jTextFieldTextoBusca = new javax.swing.JTextField();
         jButtonBusca = new javax.swing.JButton();
-        jProgressTempoDeBusca = new javax.swing.JProgressBar();
         jLabelLocalArquivo = new javax.swing.JLabel();
         jTextFieldLocalArquivo = new javax.swing.JTextField();
         jButtonBrowser = new javax.swing.JButton();
@@ -100,7 +100,6 @@ public class BrowserView extends javax.swing.JFrame {
         					.addGroup(layout.createParallelGroup(Alignment.LEADING)
         						.addComponent(jTextFieldTextoBusca, 411, 411, 411)
         						.addComponent(jButtonBusca, GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
-        						.addComponent(jProgressTempoDeBusca, GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
         						.addComponent(jLabelResposta, GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE))))
         			.addContainerGap())
         );
@@ -124,9 +123,7 @@ public class BrowserView extends javax.swing.JFrame {
         				.addComponent(jTextFieldLocalArquivo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
         			.addGap(18, 18, Short.MAX_VALUE)
         			.addComponent(jButtonBusca)
-        			.addGap(23)
-        			.addComponent(jProgressTempoDeBusca, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addGap(43)
         			.addComponent(jLabelResposta, GroupLayout.PREFERRED_SIZE, 75, GroupLayout.PREFERRED_SIZE)
         			.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -237,7 +234,6 @@ public class BrowserView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelLocalArquivo;
     private javax.swing.JLabel jLabelResposta;
     private javax.swing.JLabel jLabelTesxtoBusca;
-    private javax.swing.JProgressBar jProgressTempoDeBusca;
     private javax.swing.JTextField jTextFieldLocalArquivo;
     private javax.swing.JTextField jTextFieldTextoBusca;
     private JComboBox comboBox;
