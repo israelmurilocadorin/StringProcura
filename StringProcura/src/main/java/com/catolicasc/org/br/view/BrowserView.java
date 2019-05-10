@@ -5,9 +5,15 @@ import javax.swing.JTextField;
 
 import com.catolicasc.org.br.KmpA;
 import com.catolicasc.org.br.LeituraDeLinhas;
+import com.catolicasc.org.br.NaiveA;
 
 import java.io.File;
 import javax.swing.JFileChooser;
+import javax.swing.JComboBox;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.GroupLayout;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.DefaultComboBoxModel;
 
 /**
  *
@@ -65,55 +71,66 @@ public class BrowserView extends javax.swing.JFrame {
                 jButtonBrowserActionPerformed(evt);
             }
         });
+        
+        comboBox = new JComboBox();
+        comboBox.setModel(new DefaultComboBoxModel(new String[] {"Naive", "Kmp"}));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(137, 137, 137)
-                                .addComponent(jLabelTesxtoBusca))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextFieldLocalArquivo, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelLocalArquivo))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonBrowser))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldTextoBusca)
-                            .addComponent(jButtonBusca, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jProgressTempoDeBusca, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelResposta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap())
+        	layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(layout.createSequentialGroup()
+        			.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        				.addGroup(layout.createSequentialGroup()
+        					.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        						.addGroup(layout.createSequentialGroup()
+        							.addGap(137)
+        							.addComponent(jLabelTesxtoBusca, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        							.addGap(7))
+        						.addGroup(layout.createSequentialGroup()
+        							.addContainerGap()
+        							.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        								.addComponent(jTextFieldLocalArquivo, GroupLayout.PREFERRED_SIZE, 295, GroupLayout.PREFERRED_SIZE)
+        								.addComponent(jLabelLocalArquivo))))
+        					.addGap(12)
+        					.addGroup(layout.createParallelGroup(Alignment.TRAILING)
+        						.addComponent(jButtonBrowser)
+        						.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+        				.addGroup(layout.createSequentialGroup()
+        					.addContainerGap()
+        					.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        						.addComponent(jTextFieldTextoBusca, 411, 411, 411)
+        						.addComponent(jButtonBusca, GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
+        						.addComponent(jProgressTempoDeBusca, GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
+        						.addComponent(jLabelResposta, GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE))))
+        			.addContainerGap())
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelTesxtoBusca, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldTextoBusca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabelLocalArquivo, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButtonBrowser, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                    .addComponent(jTextFieldLocalArquivo))
-                .addGap(18, 18, Short.MAX_VALUE)
-                .addComponent(jButtonBusca)
-                .addGap(23, 23, 23)
-                .addComponent(jProgressTempoDeBusca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelResposta, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        	layout.createParallelGroup(Alignment.LEADING)
+        		.addGroup(layout.createSequentialGroup()
+        			.addContainerGap()
+        			.addComponent(jLabelTesxtoBusca, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addComponent(jTextFieldTextoBusca, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        			.addGroup(layout.createParallelGroup(Alignment.LEADING)
+        				.addGroup(layout.createSequentialGroup()
+        					.addPreferredGap(ComponentPlacement.UNRELATED)
+        					.addComponent(jLabelLocalArquivo, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE))
+        				.addGroup(layout.createSequentialGroup()
+        					.addGap(3)
+        					.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addGroup(layout.createParallelGroup(Alignment.LEADING, false)
+        				.addComponent(jButtonBrowser, GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+        				.addComponent(jTextFieldLocalArquivo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+        			.addGap(18, 18, Short.MAX_VALUE)
+        			.addComponent(jButtonBusca)
+        			.addGap(23)
+        			.addComponent(jProgressTempoDeBusca, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+        			.addPreferredGap(ComponentPlacement.RELATED)
+        			.addComponent(jLabelResposta, GroupLayout.PREFERRED_SIZE, 75, GroupLayout.PREFERRED_SIZE)
+        			.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+        getContentPane().setLayout(layout);
 
         pack();
     }// </editor-fold>                        
@@ -139,41 +156,43 @@ public class BrowserView extends javax.swing.JFrame {
     private void jButtonBuscaActionPerformed(java.awt.event.ActionEvent evt) {                                             
     	String busca = jTextFieldTextoBusca.getText();
     	String caminhoDoArquivo = jTextFieldLocalArquivo.getText();
-    	
     	String resposta = "Problema não encontrado!";
     	
     	if(busca.isEmpty() == false) {
     		resposta = "Tem texto!";
     		if(caminhoDoArquivo.isEmpty() == false) {
+    			int metodo = comboBox.getSelectedIndex();
     			resposta = "Tem diretório do arquivo!";
     			LeituraDeLinhas arquivo = new LeituraDeLinhas(caminhoDoArquivo);
     			arquivo.readerFile();
     			String conteudoDoArquivo = arquivo.getText();
-    			
-    			
-    			
+    			    	    	
+    			if(metodo == 1) {
+    				KmpA kmp = new KmpA(busca, conteudoDoArquivo);
+        			kmp.buscar();
+        			resposta = kmp.getResposta();
+        			
+        			if( resposta == null ) {
+        				kmp.setResposta("Padrão não encontrado!");
+        				resposta = kmp.getResposta();
+        			}	
+    			}else if(metodo == 0) {
+    				NaiveA naive= new NaiveA(busca, conteudoDoArquivo);
+    				naive.buscar();
+        			resposta = naive.getResposta();
+        			
+        			if( resposta == null ) {
+        				naive.setResposta("Padrão não encontrado!");
+        				resposta = naive.getResposta();
+        			}
+    			}
+    		    			
     		}else {
     			resposta = "Não tem diretório do arquivo!";
     		}
     	}else {
     		resposta = "Texto de Busca não foi inserido!";
     	}
-    
-        	
-    	//}
-    		
-    	//
-		//	
-    	
-    	//	KmpA kmp = new KmpA(busca, conteudoDoArquivo);
-    	//	kmp.buscar();
-    	//	resposta = kmp.getResposta();
-    	
-    	//    	if( resposta == null ) {
-    		//	kmp.setResposta("Não encontrado!");
-        	//        	resposta = kmp.getResposta();
-//    	}
-    		
     	jLabelResposta.setText(resposta);
     }                                            
 
@@ -221,5 +240,6 @@ public class BrowserView extends javax.swing.JFrame {
     private javax.swing.JProgressBar jProgressTempoDeBusca;
     private javax.swing.JTextField jTextFieldLocalArquivo;
     private javax.swing.JTextField jTextFieldTextoBusca;
+    private JComboBox comboBox;
     // End of variables declaration                   
 }
