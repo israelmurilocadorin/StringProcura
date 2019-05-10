@@ -28,9 +28,9 @@ public class App
 //    	n.buscar();
 //    	System.out.println(n.getResposta());
         
-    	NaiveA n = new NaiveA("Esse", "Esse é o texto de teste");
-    	n.buscar();
-    	System.out.println(n.getResposta());
+    	//NaiveA n = new NaiveA("Esse", "Esse ï¿½ o texto de teste");
+    	//n.buscar();
+    	//System.out.println(n.getResposta());
 
     }
 }
